@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar System</title>
+  <link rel="stylesheet" href="solar.css" />
+</head>
+<body>
+  <div class="universe">
+    <div class="sun">
+      <img src="sun2.png" alt="Sun" />
+    </div>
+
+    <!-- Mercury Orbit -->
+    <div class="orbit mercury-orbit">
+        <div class="mercury-revolve">
+            <label for="toggle-mercury" class="mercury"></label>
+          </div>
+          
+    </div>
+    <!-- Venus Orbit -->
+    <div class="orbit venus-orbit">
+        <div class="venus-revolve">
+          <div class="venus"></div>
+        </div>
+      </div>
+       <!-- earth orbit -->
+      <div class="orbit earth-orbit">
+        <div class="earth-revolve">
+            <label for="toggle-earth" class="earth"></label>
+          </div>
+          
+      </div>
+
+      <!-- Jupiter Orbit -->
+<div class="orbit jupiter-orbit">
+    <div class="jupiter-revolve">
+      <div class="jupiter"></div>
+    </div>
+  </div>
+  
+<!-- Saturn Orbit -->
+<div class="orbit saturn-orbit">
+    <div class="saturn-revolve">
+      <div class="saturn"></div>
+    </div>
+  </div>
+
+  <!-- Uranus Orbit -->
+<div class="orbit uranus-orbit">
+    <div class="uranus-revolve">
+      <div class="uranus"></div>
+    </div>
+  </div>
+  
+<!-- Planet List on Right -->
+<div class="planet-list">
+    <label for="toggle-mercury">
+      <img src="mercury.png" alt="Mercury">
+      <span>Mercury</span>
+    </label>
+    <label for="toggle-venus">
+      <img src="venus.png" alt="Venus" >
+      <span>Venus</span>
+    </label>
+    <label for="toggle-earth">
+      <img src="earth.png" alt="Earth">
+      <span>Earth</span>
+    </label>
+    <!-- <label for="modal-mars">
+      <img src="mars.jp" alt="Mars">
+      <span>Mars</span>
+    </label> -->
+    <label for="toggle-jupiter">
+      <img src="jupitor.png" alt="Jupiter">
+      <span>Jupiter</span>
+    </label>
+    <label for="toggle-saturn">
+      <img src="saturn.png" alt="Saturn">
+      <span>Saturn</span>
+    </label>
+    <label for="toggle-uranus">
+      <img src="uranus.png" alt="Uranus">
+      <span>Uranus</span>
+    </label>
+    
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Modal Trigger -->
+<input type="checkbox" id="modal-toggle" hidden />
+
+<!-- Label acts as a trigger -->
+<label for="modal-toggle" class="sun-modal-trigger">
+  <img src="sun2.png" alt="Sun" />
+</label>
+
+<!-- Modal Content -->
+<div class="modal-overlay">
+  <div class="modal-box">
+    <label for="modal-toggle" class="close-btn">&times;</label>
+    <img src="sun2.png" alt="Sun" class="modal-image" />
+    <div class="modal-text">
+      <h2>Sun</h2>
+      <ul>
+        <li>The Sun is the star at the center of our solar system.</li>
+        <li>It provides light and heat to the planets.</li>
+        <li>It is mostly composed of hydrogen and helium.</li>
+        <li>The Sun is about 4.6 billion years old.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- MERCURY MODAL -->
+<input type="checkbox" id="toggle-mercury" hidden />
+<label for="toggle-mercury" class="trigger mercury-trigger"></label>
+<div class="modal-overlay" id="modal-mercury">
+
+  <div class="modal-box">
+    <label for="model-toggle" class="close-btn">&times;</label>
+    <img src="mercury.png" class="modal-image" />
+    <div class="modal-text">
+      <h2>Mercury</h2>
+      <ul>
+        <li>Smallest planet</li>
+        <li>Closest to the Sun</li>
+        <li>No atmosphere</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- VENUS MODAL -->
+<input type="checkbox" id="toggle-venus" hidden />
+<label for="toggle-venus" class="trigger venus-trigger"></label>
+<div class="modal-overlay" id="modal-venus">
+  <div class="modal-box">
+    <label for="toggle-venus" class="close-btn">&times;</label>
+    <img src="venus.png" class="modal-image" />
+    <div class="modal-text">
+      <h2>Venus</h2>
+      <ul>
+        <li>Hottest planet</li>
+        <li>Thick atmosphere</li>
+        <li>Same size as Earth</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- EARTH MODAL -->
+<input type="checkbox" id="toggle-earth" hidden />
+<label for="toggle-earth" class="trigger earth-trigger"></label>
+<div class="modal-overlay" id="modal-earth">
+  <div class="modal-box">
+    <label for="toggle-earth" class="close-btn">&times;</label>
+    <img src="earth.png" class="modal-image" />
+    <div class="modal-text">
+      <h2>Earth</h2>
+      <ul>
+        <li>Our home planet</li>
+        <li>Only known life-supporting planet</li>
+        <li>70% covered by water</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- JUPITER MODAL -->
+<input type="checkbox" id="toggle-jupiter" hidden />
+<label for="toggle-jupiter" class="trigger jupiter-trigger"></label>
+<div class="modal-overlay" id="modal-jupiter">
+  <div class="modal-box">
+    <label for="toggle-jupiter" class="close-btn">&times;</label>
+    <img src="jupitor.png" class="modal-image" />
+    <div class="modal-text">
+      <h2>Jupiter</h2>
+      <ul>
+        <li>Largest planet</li>
+        <li>Has 79+ moons</li>
+        <li>Gas giant with Great Red Spot</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SATURN MODAL -->
+<input type="checkbox" id="toggle-saturn" hidden />
+<label for="toggle-saturn" class="trigger saturn-trigger"></label>
+<div class="modal-overlay" id="modal-saturn">
+  <div class="modal-box">
+    <label for="toggle-saturn" class="close-btn">&times;</label>
+    <img src="saturn.png" class="modal-image" />
+    <div class="modal-text">
+      <h2>Saturn</h2>
+      <ul>
+        <li>Famous for its rings</li>
+        <li>Gas giant</li>
+        <li>At least 83 moons</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- URANUS MODAL -->
+<input type="checkbox" id="toggle-uranus" hidden />
+<label for="toggle-uranus" class="trigger uranus-trigger"></label>
+<div class="modal-overlay" id="modal-uranus">
+  <div class="modal-box">
+    <label for="toggle-uranus" class="close-btn">&times;</label>
+    <img src="uranus.png" class="modal-image" />
+    <div class="modal-text">
+      <h2>Uranus</h2>
+      <ul>
+        <li>Rotates on its side</li>
+        <li>Ice giant</li>
+        <li>Faint rings</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

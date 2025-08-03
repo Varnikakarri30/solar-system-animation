@@ -1,0 +1,408 @@
+/* Reset margins and hide overflow */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Universe container */
+  .universe {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('universe2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* Centered Sun */
+  .sun {
+    position: absolute;
+    top: 50.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .sun img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Mercury Orbit */
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  /* Mercury-specific orbit radius */
+  .mercury-orbit {
+    width: 260px; /* Orbit diameter */
+    height: 260px;
+  }
+  
+  /* Mercury revolving container */
+  .mercury-revolve {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 4s linear infinite;
+    transform-origin: center center;
+  }
+  
+  /* Mercury image */
+  .mercury {
+    width: 50px;
+    height: 50px;
+    background-image: url('mercury.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Rotation animation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Venus orbit - bigger */
+.venus-orbit {
+    width: 320px;
+    height: 320px;
+  }
+  
+  /* Mercury revolution container */
+  /* .mercury-revolve {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 4s linear infinite;
+    transform-origin: center;
+  } */
+  
+  /* Venus revolution container */
+  .venus-revolve {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 7s linear infinite; /* Slower than Mercury */
+    transform-origin: center;
+  }
+  /* Venus image */
+.venus {
+    width: 90px;
+    height: 90px;
+    background-image: url('venus.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Rotation animation
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
+
+
+  .earth-orbit {
+    width: 440px;
+    height: 440px;
+  }
+  
+  /* Earth revolution container */
+  .earth-revolve {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 10s linear infinite; /* Slower than Venus */
+    transform-origin: center;
+  }
+  
+  /* Earth image */
+  .earth {
+    width: 80px;
+    height: 80px;
+    background-image: url('earth.png'); /* Replace with your Earth image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Jupiter Orbit - larger than Earth */
+.jupiter-orbit {
+    width: 580px;
+    height: 580px;
+  }
+  
+  /* Jupiter revolution container */
+  .jupiter-revolve {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 16s linear infinite; /* Slower orbit */
+    transform-origin: center;
+  }
+  
+  /* Jupiter image */
+  .jupiter {
+    width: 110px;
+    height: 110px;
+    background-image: url('jupitor.png'); /* Replace with your Jupiter image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Saturn Orbit - larger than Jupiter */
+.saturn-orbit {
+  width: 700px;
+  height: 700px;
+}
+
+/* Saturn revolution container */
+.saturn-revolve {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: rotate 22s linear infinite; /* Slower than Jupiter */
+  transform-origin: center;
+}
+
+/* Saturn image */
+.saturn {
+  width: 100px;
+  height: 100px;
+  background-image: url('saturn.png'); /* Replace with your Saturn image with rings */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* Uranus Orbit - larger than Saturn */
+.uranus-orbit {
+    width: 800px;
+    height: 800px;
+  }
+  
+  /* Uranus revolution container */
+  .uranus-revolve {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 30s linear infinite; /* Slower orbit */
+    transform-origin: center;
+  }
+  
+  /* Uranus image */
+  .uranus {
+    width: 90px;
+    height: 90px;
+    background-image: url('uranus.png'); /* Replace with your Uranus image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+/* Replacing the original Sun image with label */
+.sun-modal-trigger {
+    position: absolute;
+    top: 50.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: inline-block;
+    width: 280px;
+    height: 280px;
+  }
+  
+  .sun-modal-trigger img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Modal hidden by default */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content */
+  .modal-box {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    color: white;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .modal-box img.modal-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .modal-text h2 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  .modal-text ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Checkbox checked = show modal */
+  #modal-toggle:checked + label + .modal-overlay {
+    display: flex;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+ /* Right Planet List */
+  .planet-list {
+    width: 180px;
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+  }
+  .planet-list label {
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .planet-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #555;
+  }
+  .planet-list span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  #toggle-mercury:checked ~ #modal-mercury,
+  #toggle-venus:checked ~ #modal-venus,
+  #toggle-earth:checked ~ #modal-earth,
+  #toggle-jupiter:checked ~ #modal-jupiter,
+  #toggle-saturn:checked ~ #modal-saturn,
+  #toggle-uranus:checked ~ #modal-uranus {
+    display: flex;
+  }
+  
+  
+ 
+  
+  /* Modal overlay styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; /* important for centering */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content */
+  .modal-image {
+    width: 150px;
+    margin-right: 20px;
+  }
+  
+  .modal-text {
+    color: white;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
